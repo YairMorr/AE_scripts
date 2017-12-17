@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<ExtensionManifest
+	Version="6.0"
+	ExtensionBundleId="com.example.assetbrowser"
+	ExtensionBundleVersion="1.0.0"
+	ExtensionBundleName="Hello_World"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<ExtensionList>
+		<Extension Id="com.example.assetbrowser.panel" Version="1.0" />
+	</ExtensionList>
+
+	<ExecutionEnvironment>
+		<HostList>
+			<Host Name="AEFT" Version="10.0" />
+		</HostList>
+
+		<LocaleList>
+			<Locale Code="All" />
+		</LocaleList>
+
+		<RequiredRuntimeList>
+			<RequiredRuntime Name="CSXS" Version="6.0" />
+		</RequiredRuntimeList>
+	</ExecutionEnvironment>
+
+	<DispatchInfoList>
+		<Extension Id="com.example.assetbrowser.panel">
+			<HostList>
+				<Host Name="AEFT" />
+			</HostList>
+			<DispatchInfo>
+				<Resources>
+					<MainPath>./index.html</MainPath>
+					<ScriptPath>./jsx/assetbrowser.jsx</ScriptPath>
+					<CEFCommandLine />
+				</Resources>
+
+				<Lifecycle>
+					<AutoVisible>true</AutoVisible>
+				</Lifecycle>
+
+				<UI>
+
+					<Type>Panel</Type>
+					<Menu>Asset Browser</Menu>
+					
+					<Geometry>
+						<Size>
+							<Height>150</Height>
+							<Width>300</Width>
+						</Size>
+						<MinSize>
+							<Height>100</Height>
+							<Width>150</Width>
+						</MinSize>
+							<MaxSize>
+							<Height>200</Height>
+							<Width>350</Width>
+						</MaxSize>
+					</Geometry>
+					
+					<Icons>
+
+					</Icons>
+				</UI>
+			</DispatchInfo>
+		</Extension>
+	</DispatchInfoList>
+</ExtensionManifest>
